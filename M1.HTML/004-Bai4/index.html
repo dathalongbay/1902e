@@ -17,7 +17,88 @@
         </p>
     </div>
     <div class="col-right" style="width: 68%;float: right">
-        2
+        <h2>Tạo tài khoản</h2>
+        <form name="tao-tai-khoan" method="post" action="">
+            <p>
+                <label>Họ tên</label>
+                <input type="text" name="name" value="">
+            </p>
+            <p>
+                <label>SDT</label>
+                <input type="text" name="phone" value="">
+                <button>Gửi mã xác thực</button>
+            </p>
+            <p>
+                <label>Mã xác thực</label>
+                <input type="text" name="code" value="">
+            </p>
+            <p>
+                <label>Email</label>
+                <input type="email" name="email" value="">
+            </p>
+            <p>
+                <label>Mật khẩu</label>
+                <input type="password" name="password" value="">
+            </p>
+            <p>
+                <label>Giới tính</label>
+                <span>
+                    Nam
+                    <input type="radio" name="gender" value="nam">
+                </span>
+                <span>
+                    Nữ
+                    <input type="radio" name="gender" value="nu">
+                </span>
+            </p>
+            <p>
+                <label>Ngày sinh</label>
+                <select name="day">
+                    <option value="">Ngày sinh</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="...">...</option>
+                    <option value="31">31</option>
+                </select>
+
+                <select name="month">
+                    <option value="">Tháng sinh</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="...">...</option>
+                    <option value="12">12</option>
+                </select>
+
+                <select name="year">
+                    <option value="">Năm sinh</option>
+                    <option value="1880">1880</option>
+                    <option value="1881">1881</option>
+                    <option value="1882">1882</option>
+                    <option value="...">...</option>
+                    <option value="2019">2019</option>
+                </select>
+            </p>
+
+            <p>
+                <input type="checkbox" name="bantin" value="">
+                Nhận các thông tin và chương trình khuyến mãi của Tiki qua email.
+            </p>
+
+            <p>
+                <input type="submit" name="guithongtin" value="Tạo tài khoản">
+            </p>
+
+            <p>Khi bạn nhấn Đăng ký,
+                bạn đã đồng ý thực hiện mọi giao dịch mua bán theo
+                <a href="https://hotro.tiki.vn/hc/vi/articles/201971214">điều kiện sử dụng và chính sách của Tiki.</a> </p>
+
+        </form>
     </div>
 </div>
 
