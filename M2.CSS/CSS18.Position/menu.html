@@ -5,12 +5,63 @@
     <title>Title</title>
 
     <link rel="stylesheet" href="normalize.css" />
+
+    <style type="text/css">
+        .container {
+            width: 1000px;
+            margin: 50px auto;
+            background: #CCCCCC;
+        }
+
+        ul.main-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul.main-menu > li {
+            float: left;
+            padding: 10px;
+            background: orange;
+        }
+
+        ul.main-menu > li a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
 
     <div class="container">
         <div class="row">
-
+            <nav>
+                <ul class="main-menu">
+                    <li>
+                        <a href="#">Thời sự</a>
+                        <ul>
+                            <li><a href="#">Chính trị</a></li>
+                            <li><a href="#">Giao thông</a></li>
+                            <li><a href="#">Đô thị</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Pháp luật</a>
+                        <ul>
+                            <li><a href="#">Pháp đình</a></li>
+                            <li><a href="#">Vụ án</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Thế giới</a>
+                        <ul>
+                            <li><a href="#">Quân sự</a></li>
+                            <li><a href="#">Tư liệu</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Kinh doanh</a></li>
+                    <li><a href="#">Công nghệ</a></li>
+                </ul>
+            </nav>
         </div>
     </div>
 
