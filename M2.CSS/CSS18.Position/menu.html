@@ -44,9 +44,35 @@
         ul.main-menu li:hover > ul {
             display: block;
         }
+
+        ul.main-menu li {
+            position: relative;
+            background: orange;
+        }
+
+
+
+        ul.main-menu li > ul {
+            position: absolute;
+            left: 0px;
+            top: 40px;
+            width: 250px;
+        }
+
+        ul.main-menu ul li {
+            padding: 10px;
+        }
     </style>
 </head>
-<body>
+<body style="min-height: 1000px">
+
+    <h1>Khi muốn đặt vị trí của 1 khối html dựa vào 1 khối html khác</h1>
+    <h1>Thì mình sử dụng position cho thẻ mẹ là relative</h1>
+    <h1>và sử dụng position cho thẻ con là absolute</h1>
+    <h1>Sau đó đặt các thuộc tính top , left hay right , bottom cho thẻ con</h1>
+    <p>Trong ví dụ bên dưới thì mình đặt position:relative cho thẻ li</p>
+    <p>và đặt position:absolute cho thẻ ul nằm trực tiếp trong thẻ li</p>
+    <p>và đặt thuộc tính top , left cho thẻ ul này</p>
 
     <div class="container">
         <div class="row">
