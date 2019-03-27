@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="normalize.css">
+
+    <style type="text/css">
+        header {
+            background: yellow;
+            padding: 50px;
+            text-align: center;
+        }
+
+        footer {
+            background: green;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .content {
+            background: #CCCCCC;
+            overflow: hidden;
+        }
+
+        .content .sidebar {
+            width: 30%;
+            height: 200px;
+            background: greenyellow;
+            float: right;
+        }
+
+        .content .main-content {
+            background: #FF0000;
+            color: white;
+            width: 70%;
+            float: left;
+        }
+
+        nav {
+            background: tomato;
+        }
+
+        nav ul.main-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        ul.main-menu > li {
+            float: left;
+            padding: 10px;
+            background: green;
+        }
+
+        ul li a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-wrap">
+        <header>Header</header>
+        <nav>
+            <ul class="main-menu">
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Sản phẩm</a></li>
+                <li><a href="#">Liên hệ</a></li>
+                <li><a href="#">Tin tức</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <div class="sidebar">
+                Sidebar
+                Sidebar
+                Sidebar
+            </div>
+            <div class="main-content">
+                A positioned element is an element whose computed position value is either relative, absolute, fixed, or sticky. <br>
+                (In other words, it's anything except static.) <br>
+                A relatively positioned element is an element whose computed position value is relative. <br>
+                The top and bottom properties specify the vertical offset from its normal position; <br>
+                the left and right properties specify the horizontal offset.
+                An absolutely positioned element is an element whose computed position value is absolute or fixed. <br>
+                The top, right, bottom, and left properties specify offsets from the edges of the element's containing block.<br>
+                (The containing block is the ancestor relative to which the element is positioned.) <br>
+                If the element has margins, they are added to the offset.
+            </div>
+        </div>
+        <footer>Footer</footer>
+    </div>
+
+</body>
+</html>
