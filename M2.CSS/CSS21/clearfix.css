@@ -1,0 +1,14 @@
+/**
+    Clearfix begin
+*/
+.clearfix {
+    overflow: auto;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+/**
+    Clearfix end
+ */
