@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="normalize.css">
+
+    <style type="text/css">
+        /*
+            Default Style
+        */
+        .wrap {
+            overflow: auto;
+        }
+
+        .wrap #sidebar {
+            width: 20%;
+            float: left;
+        }
+
+        .wrap #main {
+            width: 80%;
+            float: right;
+            background: green;
+            color: white;
+        }
+
+        @media screen and (max-width: 680px){
+            /*
+                Từ độ rộng 480px trở xuống sẽ áp dụng đoạn code css bên dưới
+                max-width ( đi xuống ) min-width ( đi lên )
+             */
+            .wrap #sidebar {
+                width: 100%;
+                float: none;
+            }
+
+            .wrap #main {
+                width: 80%;
+                float: none;
+                background: orange;
+            }
+
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrap">
+        <div id="sidebar">
+            <ul>
+                <li><a href="#">The gioi</a></li>
+                <li><a href="#">Thoi su</a></li>
+                <li><a href="#">van hoa</a></li>
+                <li><a href="#">chinh tri</a></li>
+                <li><a href="#">the thao</a></li>
+            </ul>
+        </div>
+        <div id="main">
+            <h1>Noi dung chinh của trang web</h1>
+            <p>Noi dung chinh của trang web</p>
+            <p>Noi dung chinh của trang web</p>
+            <p>Noi dung chinh của trang web</p>
+            <p>Noi dung chinh của trang web</p>
+            <p>Noi dung chinh của trang web</p>
+        </div>
+    </div>
+
+</body>
+</html>
