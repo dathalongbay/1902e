@@ -1,3 +1,6 @@
+
+
+/* CSS FOR ALL SCREEN  */
 * {
     box-sizing: border-box;
 }
@@ -7,15 +10,22 @@
     clear: both;
     display: table;
 }
-/* CSS FOR MOBILE  */
+
 [class*="col-"] {
     float: left;
     padding: 15px;
-    width: 100%;
 }
 
+
+/* CSS FOR MOBILE  */
+
+    [class*="col-"] {
+        width: 100%;
+    }
+
+
 @media screen and (min-width: 600px) {
-    /* CSS FOR TAB IPAD */
+    /* CSS FOR TAB IPAD  600 -> 768*/
     .col-sm1 {
         width: 8.33%;
     }
@@ -37,7 +47,7 @@
 }
 
 @media screen and (min-width: 768px) {
-    /* CSS FOR PC */
+    /* CSS FOR PC 768 => vo cuc */
 
     .col-md1 {
         width: 8.33%;
@@ -58,4 +68,6 @@
     .col-md11 {width: 91.66%;}
     .col-md12 {width: 100%;}
 }
+
+
 
