@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="normalize.css">
+
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-size: 16px;
+        }
+
+
+        ul::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        #page-wrap {
+            border-left: 3px solid green;
+            border-right: 3px solid green;
+            width: 1000px;
+            margin: 0 auto;
+            padding: 0;
+            height: 1000px;
+        }
+
+        #page-wrap .inner-header{
+            background: grey;
+            padding: 50px;
+            text-align: center;
+            color: green;
+        }
+
+        nav {
+            background: orange;
+            color: white;
+            font-size: 20px;
+            margin: 0;
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            background: orange;
+        }
+
+        nav > ul {
+            display: block;
+        }
+
+        nav > ul > li {
+            float: left;
+            padding: 10px 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            color: green;
+        }
+
+        nav > ul ul {
+            display: none;
+            width: 250px;
+        }
+
+        nav ul li {
+            position: relative;
+            background: orange;
+            padding: 0 20px;
+            height: 50px;
+            line-height: 50px;
+        }
+
+        nav ul li:hover > ul {
+            display: block;
+        }
+
+        nav ul li ul {
+            position: absolute;
+            border: 1px solid tomato;
+        }
+
+        nav > ul > li > ul {
+            top: 50px;
+            left: 0;
+        }
+
+        nav > ul > li > ul li ul{
+            top: 0;
+            left: 250px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="page-wrap">
+        <header>
+            <div class="inner-header">
+                <h1>Website template</h1>
+            </div>
+            <div class="menu-wrap">
+                <nav>
+                    <ul >
+                        <li>
+                            <a href="#">Trang chủ</a>
+                            <ul >
+                                <li><a href="#">Trang chủ 1</a>
+                                    <ul >
+                                        <li><a href="#">Trang chủ lvl 3.1</a></li>
+                                        <li><a href="#">Trang chủ lvl 3.1</a></li>
+                                        <li><a href="#">Trang chủ lvl 3.1</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Trang chủ 2</a></li>
+                                <li><a href="#">Trang chủ 3</a></li>
+                                <li><a href="#">Trang chủ 4</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Sản phẩm</a>
+                            <ul >
+                                <li><a href="#">Sản phẩm 2</a></li>
+                                <li><a href="#">Sản phẩm 3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Tin tức</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                        <li><a href="#">Sự kiện</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </header>
+    </div>
+
+</body>
+</html>
