@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Thao tác bằng jquery trên cây DOM</h1>
+
+<div class="container">
+    <nav>
+        <ul>
+            <li class="home"><a href="">Trang chủ</a> </li>
+            <li class="new"><a href="">Tin tức</a> </li>
+            <li class="intro"><a href="">Giới thiệu</a> </li>
+            <li class="contact"><a href="">Liên hệ</a> </li>
+            <li class="product"><a href="">Sản phẩm</a> </li>
+        </ul>
+    </nav>
+</div>
+
+<div style="margin-top: 30px">
+    <button id="control0">sibling()</button>
+    <button id="control1">sibling(filter)</button>
+    <button id="control2">next()</button>
+    <button id="control3">nextAll()</button>
+    <button id="control4">nextUntil(filter)</button>
+    <button id="control5">prev()</button>
+    <button id="control6">prevAll()</button>
+    <button id="control7">prevUntil()</button>
+</div>
+
+<pre style="padding: 20px">
+    Các phương thức tìm anh chị em
+    1 - siblings() : trả về tất các thẻ anh chị em của selector được chọn
+    siblings(filter) : lọc trong các thẻ anh chị em phù hợp filter truyền vào
+    2 - next() : trả về 1 thẻ tiếp theo là anh chị em của selector được chọn
+    3 - nextAll() : trả về tất cả các thẻ tiếp theo là anh chị em của selector được chọn
+    4 - nextUntil(filter) : trả về tất các thẻ anh chị em nằm giữa selector và filter ở
+    phía sau của selector
+    5 - prev() : trả về 1 thẻ anh chị em ở phía trước của selector
+    6 - prevAll() : trả về tất cả các thẻ anh chị ở phía truoc của selector
+    7 - prevUntil(filter) : trả về tất các thẻ anh chị em nằm giữa selector và filter nhưng mà
+    phải ở phía trước
+</pre>
+
+<script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#control0").on("click", function () {
+            // siblings() không có filter
+            $("li.intro").siblings().css("border", "2px solid red").css("padding","20px");
+        });
+
+        $("#control1").on("click", function () {
+            // siblings() có filter
+            $("li.intro").siblings(".product").css("border", "2px solid red").css("padding","20px");
+        });
+
+        $("#control2").on("click", function () {
+            $("li.intro").next().css("border", "2px solid red").css("padding","20px");
+        });
+
+        $("#control3").on("click", function () {
+            $("li.intro").nextAll().css("border", "2px solid red").css("padding","20px");
+        });
+
+        $("#control4").on("click", function () {
+            $("li.intro").nextUntil(".product").css("border", "2px solid red").css("padding","20px");
+        });
+
+        $("#control5").on("click", function () {
+            $("li.intro").prev().css("border", "2px solid red").css("padding","20px");
+        });
+
+        $("#control6").on("click", function () {
+            $("li.intro").prevAll().css("border", "2px solid red").css("padding","20px");
+        });
+
+        $("#control7").on("click", function () {
+            $("li.intro").prevUntil(".home").css("border", "2px solid red").css("padding","20px");
+        });
+    });
+</script>
+</body>
+</html>
