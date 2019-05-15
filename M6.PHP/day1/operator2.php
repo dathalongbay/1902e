@@ -14,6 +14,7 @@
         $a = $a / 2; => $a /= 2;
         toán tử ++ là toán tử tăng thêm 1 đơn vị
         toàn tử -- là giảm đi 1 đơn vị
+
     </pre>
     <?php
     $a = 5;
