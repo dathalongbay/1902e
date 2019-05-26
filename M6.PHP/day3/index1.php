@@ -72,5 +72,15 @@ echo "<br>"; var_dump(strtotime($str_date3));
 echo '<br> strtotime($str_date)' . $str_date . " -- " . strtotime($str_date);
 
 ?>
+<pre>
+    Hàm mktime() trả về timestamp từ các tham số được truyền vào
+    mktime(hour, minute, second, month, day, year)
+    Nếu không có tham số được truyền vào nó sẽ lấy timestamp hiện tại
+</pre>
+
+<?php
+echo "<br> mktime() : ". mktime();
+echo "<br> mktime(05, 30, 30, 12, 15, 2019) : ". mktime(05, 30, 30, 12, 15, 2019);
+?>
 </body>
 </html>
