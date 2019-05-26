@@ -6,6 +6,7 @@
 </head>
 <body>
     <pre>
+        Kiểu thời gian đọc được
         Xử lý thời gian trong php
         cú pháp hàm date(format, time)
         date(format) : lấy ra thời gian hiện tại
@@ -28,5 +29,34 @@
     echo "<br> date('D/M/Y h:i:s') " . date("D/M/Y h:i:s");
     echo "<br> date('D/M/Y H:i:s') " . date("D/M/Y H:i:s");
     ?>
+<pre>
+    Kiểu thời gian timestamp
+    Kiểu này thì không đọc được chính xác là ngày tháng năm nào
+    nhưng có thể tính toán như công trừ được
+    hàm time() lấy ra thời gian hiện tại nhưng ở dạng timestamp
+</pre>
+<?php echo "<br> time() " . time(); ?>
+<pre>
+    Vấn đề 1 : chuyển định dạng thời gian timestamp về kiểu
+    định dạng thời gian đọc được
+    Giải quyết : date('format', timestamp)
+</pre>
+
+
+<?php
+$timestamp_now = time();
+$timestamp_next_month = time() + (60*60*24*30);
+echo '<br> tính 30 ngày tiếp theo - date("d/m/Y", $timestamp_next_month): ' . $timestamp_next_month . " -- " . date('d/m/Y', $timestamp_next_month);
+?>
+<pre>
+    Vấn đề 2 : Chuyển đổi định dạng thời gian date() về timestamp
+    Giải quyết : strtotime()
+</pre>
+
+<?php
+$str_date = "05-26-2019";
+// chuyển đổi thành dạng timestamp
+echo '<br> strtotime($str_date)' . $str_date . " -- " . strtotime($str_date);
+?>
 </body>
 </html>
