@@ -51,12 +51,26 @@ echo '<br> tính 30 ngày tiếp theo - date("d/m/Y", $timestamp_next_month): ' 
 <pre>
     Vấn đề 2 : Chuyển đổi định dạng thời gian date() về timestamp
     Giải quyết : strtotime()
+    hàm này sẽ chuyển đổi 1 số chuỗi thành thời gian timestamp
+    nhưng hàm này lại chỉ hỗ trợ 1 số kiểu định dạng thời gian như :
+    2019-01-31 : Y-m-d
+    31-01-2019 : d-m-Y
+    Nếu không phải kiểu định dạng nó hỗ trợ nó sẽ trả về false
+    Quan sát kết quả của hàm var_dump() bên dưới :
 </pre>
 
 <?php
-$str_date = "05-26-2019";
+$str_date = "2019-01-31";
 // chuyển đổi thành dạng timestamp
+echo "<br>"; var_dump(strtotime($str_date));
+$str_date1 = "31/01/2019";
+echo "<br>"; var_dump(strtotime($str_date1));
+$str_date2 = "31-01-2019";
+echo "<br>"; var_dump(strtotime($str_date2));
+$str_date3 = "01-31-2019";
+echo "<br>"; var_dump(strtotime($str_date3));
 echo '<br> strtotime($str_date)' . $str_date . " -- " . strtotime($str_date);
+
 ?>
 </body>
 </html>
