@@ -12,12 +12,19 @@
     cách 2 : include_once "đường dẫn của file.php"
     cách 3 : require "đường dẫn của file.php"
     cách 4 : require_once "đường dẫn của file.php"
+    Hàm var_dump($bien) trả về kiểu dữ liệu của biến và giá trị của biến
+    hàm này được sử dụng đẻ debug
 </pre>
 
 <?php
+// nạp file functions.php vào trong file hiện tại
+require_once "functions1.php";
+
 $r = 5;
 $ketqua = tinhchuvihinhtron($r);
 echo "tính chu vi hình tròn";
+echo "<br>";
+
 var_dump($ketqua);
 
 /*

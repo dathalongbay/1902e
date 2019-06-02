@@ -10,8 +10,8 @@
     Để nạp file vào 1 file khác thì sử dụng :
     cách 1 : include "đường dẫn của file.php"
     cách 2 : include_once "đường dẫn của file.php"
-    cách 2 : require "đường dẫn của file.php"
-    cách 2 : require_once "đường dẫn của file.php"
+    cách 3 : require "đường dẫn của file.php"
+    cách 4 : require_once "đường dẫn của file.php"
     Hàm var_dump($bien) trả về kiểu dữ liệu của biến và giá trị của biến
     hàm này được sử dụng đẻ debug
 </pre>
