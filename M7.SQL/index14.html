@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<pre>
+    Câu lệnh BETWEEN ( lấy trong khoảng từ ? đến ? )
+    Cú pháp :
+    SELECT column_name(s) FROM table_name WHERE column_name BETWEEN value1 AND value2;
+    ví dụ 1 :
+    lấy ra tất cả khách hàng trong bảng customer có id từ 10 đến 20
+    SELECT * FROM customers WHERE id BETWEEN 10 AND 20
+    ví dụ 2 : lấy ra tất cả các đơn hàng được đặt từ 01 tháng 01 năm 2016 đến
+    01 tháng 03 năm 2016
+    SELECT * FROM orders WHERE order_date BETWEEN '2006-01-01 00:00:00' AND '2006-03-01 00:00:00'
+</pre>
+
+</body>
+</html>
