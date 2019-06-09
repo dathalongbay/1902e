@@ -10,6 +10,15 @@
     <?php
     // nạp file kết nối CSDL
     include_once "config.php";
+
+    $sqlSelect = "SELECT * FROM employees";
+
+    /**
+     * Thực hiện câu truy vấn và trả data cho biến $result
+     */
+    $result = $connection->query($sqlSelect);
+
+
     ?>
 
 
@@ -31,36 +40,35 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>John</td>
-                        <td>Doe</td>
-                        <td>john@example.com</td>
-                        <td>john@example.com</td>
-                        <td>
-                            <p><a href="edit.php" class="btn btn-warning">Sửa nhân viên</a> </p>
-                            <p><a href="delete.php" class="btn btn-danger">Xóa nhân viên</a> </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Mary</td>
-                        <td>Moe</td>
-                        <td>mary@example.com</td>
-                        <td>mary@example.com</td>
-                        <td>
-                            <p><a href="edit.php" class="btn btn-warning">Sửa nhân viên</a> </p>
-                            <p><a href="delete.php" class="btn btn-danger">Xóa nhân viên</a> </p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>July</td>
-                        <td>Dooley</td>
-                        <td>july@example.com</td>
-                        <td>july@example.com</td>
-                        <td>
-                            <p><a href="edit.php" class="btn btn-warning">Sửa nhân viên</a> </p>
-                            <p><a href="delete.php" class="btn btn-danger">Xóa nhân viên</a> </p>
-                        </td>
-                    </tr>
+                    <?php
+                    /**
+                     * Nếu $result->num_rows > 0 tức là có dữ liệu trong bảng
+                     * ngược lại là bảng đang rỗng
+                     */
+                    if ($result->num_rows > 0) {
+                        /*
+                         *
+                         * Sử dụng $result->fetch_assoc() để lấy về từng dòng bản ghi trong bảng
+                         * và trả về cho biến $row
+                         */
+                        while($row = $result->fetch_assoc()) {
+                            ?>
+                            <tr>
+                                <td><?php echo $row["id"] ?></td>
+                                <td><?php echo $row["name"] ?></td>
+                                <td><?php echo $row["address"] ?></td>
+                                <td><?php echo $row["salary"] ?></td>
+                                <td>
+                                    <p><a href="edit.php?id=<?php echo $row["id"] ?>" class="btn btn-warning">Sửa nhân viên</a> </p>
+                                    <p><a href="delete.php?id=<?php echo $row["id"] ?>" class="btn btn-danger">Xóa nhân viên</a> </p>
+                                </td>
+                            </tr>
+                            <?php
+                        }
+                    } else {
+                        echo "Không tồn tại nhân viên nào";
+                    }
+                    ?>
                     </tbody>
                 </table>
             </div>
