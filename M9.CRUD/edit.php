@@ -9,22 +9,47 @@
 </head>
 <body>
 
+<?php
+/**
+ * Nạp kết nối CSDL
+ */
+include_once "config.php";
+/**
+ * Lấy id từ trên url xuống
+ */
+$id = (int) $_GET["id"];
+
+var_dump($id);
+$sqlSelect = "SELECT * FROM employees WHERE id=".$id;
+
+$result = $connection->query($sqlSelect);
+
+$row = $result->fetch_assoc();
+
+echo "<pre>";
+print_r($row);
+echo "</pre>";
+?>
+
 <div class="container">
     <div class="row">
         <div class="col-md-12">
             <h1>Sửa nhân viên</h1>
             <form name="edit" action="" method="post">
+
+                <input type="hidden" name="employee_id" value="<?php echo $row["id"] ?>">
+
                 <div class="form-group">
                     <label>Tên nhân viên:</label>
-                    <input type="text" name="name" class="form-control">
+                    <input type="text" name="name" class="form-control" value="<?php echo $row["name"] ?>">
                 </div>
                 <div class="form-group">
                     <label>Địa chỉ nhân viên:</label>
-                    <input type="text" name="address" class="form-control">
+                    <input type="text" name="address" class="form-control" value="<?php echo $row["address"] ?>">
                 </div>
                 <div class="form-group">
                     <label>Lương nhân viên:</label>
-                    <input type="text" name="salary" class="form-control">
+                    <input type="text" name="salary" class="form-control" value="<?php echo $row["salary"] ?>">
                 </div>
 
                 <button type="submit" class="btn btn-warning">sửa nhân viên</button>
