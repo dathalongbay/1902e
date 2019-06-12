@@ -31,6 +31,72 @@ print_r($row);
 echo "</pre>";
 ?>
 
+
+
+
+<?php
+/**
+ * Kiểm tra xem có dữ liệu submit đi hay không
+ * !empty($_POST) có nghĩa là không rỗng tức là có dữ liệu trong mảng này
+ * isset($_POST) dùng để kiểm tra biến có tồn tại hay không
+ */
+if (isset($_POST) && !empty($_POST) && isset($_POST["employee_id"])) {
+
+    /**
+     * Tạo ra 1 biến để check lỗi mặc định là rỗng
+     */
+    $errors = array();
+
+    /**
+     * !isset($_POST["name"]) => không tồn tại
+     *  empty($_POST["name"]) => rỗng
+     */
+    if (!isset($_POST["name"]) || empty($_POST["name"])) {
+        $errors[] = "Tên nhân viên không hợp lệ";
+    }
+
+    if (!isset($_POST["address"]) || empty($_POST["address"])) {
+        $errors[] = "Địa chỉ nhân viên không hợp lệ";
+    }
+
+    if (!isset($_POST["salary"]) || empty($_POST["salary"])) {
+        $errors[] = "Lương nhân viên không hợp lệ";
+    }
+
+    /**
+     * $errors rỗng tức là không có lỗi
+     */
+    if (empty($errors)) {
+        $id = (int) $_POST["employee_id"];
+        $name = $_POST['name'];
+        $address = $_POST['address'];
+        $salary = $_POST['salary'];
+
+        $sqlUpdate = "UPDATE employees SET name='$name',address='$address',salary=$salary WHERE id=$id";
+        // Thực hiện câu SQL
+
+        echo $sqlUpdate;
+        $result = $connection->query($sqlUpdate);
+
+        if ($result == true) {
+            echo "<div class='alert alert-success'>
+Sửa nhân viên thành công ! <a href='index.php'>Trang chủ</a>
+</div>";
+        } else {
+            echo "<div class='alert alert-danger'>
+Sua nhân viên thất bại !
+</div>";
+        }
+    }else{
+        /**
+         * Chuyển mảng $errors thành chuỗi = hàm implode()
+         */
+        $errors_string = implode("<br>", $errors);
+        echo "<div class='alert alert-danger'>$errors_string</div>";
+    }
+}
+?>
+
 <div class="container">
     <div class="row">
         <div class="col-md-12">
