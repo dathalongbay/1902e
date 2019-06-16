@@ -1,6 +1,6 @@
 <?php
 
-
+include_once "Database.php";
 class MySqlDatabase implements Database {
 
 
@@ -13,6 +13,7 @@ class MySqlDatabase implements Database {
     public function disconnect() {
 
     }*/
+
 
 
 }
