@@ -5,14 +5,21 @@ class productModel extends Database {
     public $table = "product";
 
 
+    public function __construct($ipDatabase, $userDatabase, $passDatabase, $databaseName)
+    {
+        parent::__construct($ipDatabase, $userDatabase, $passDatabase, $databaseName);
+    }
 
 
     /**
      * Lấy ra tất các bản ghi từ bảng products
      */
     public function index() {
+        $sqlSelect = "SELECT * FROM ".$this->table;
 
-        // $this->>connection
+        $result = $this->connection->query($sqlSelect);
+
+        return $result;
     }
 
 
@@ -23,7 +30,19 @@ class productModel extends Database {
      */
     public function create($data) {
 
-        // $this->>connection
+        // $this->connection
+
+        if (isset($data["product_name"]) && isset($data["product_desc"]) && isset($data["created"])) {
+            $product_name = $data["product_name"];
+            $product_desc = $data["product_desc"];
+            $created = $data["created"];
+            $sqlInsert = "INSERT INTO ".$this->table." (product_name, product_desc, created) 
+VALUES ('$product_name', '$product_desc', '$created')";
+
+            // Thực hiện câu SQL
+            return $this->connection->query($sqlInsert);
+        }
+
     }
 
 
@@ -34,7 +53,7 @@ class productModel extends Database {
      */
     public function edit($data) {
 
-        // $this->>connection
+        // $this->connection
     }
 
 

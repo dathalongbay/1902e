@@ -23,7 +23,7 @@ class Database {
     public $databaseName;
 
 
-    public function connect($ipDatabase, $userDatabase, $passDatabase, $databaseName)
+    public function __construct($ipDatabase, $userDatabase, $passDatabase, $databaseName)
     {
         $this->ipDatabase = $ipDatabase;
         $this->userDatabase = $userDatabase;
