@@ -5,6 +5,8 @@ class productModel extends Database {
     public $table = "product";
 
 
+
+
     /**
      * Lấy ra tất các bản ghi từ bảng products
      */

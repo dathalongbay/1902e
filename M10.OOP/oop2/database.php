@@ -23,7 +23,7 @@ class Database {
     public $databaseName;
 
 
-    public function __construct($ipDatabase, $userDatabase, $passDatabase, $databaseName)
+    public function connect($ipDatabase, $userDatabase, $passDatabase, $databaseName)
     {
         $this->ipDatabase = $ipDatabase;
         $this->userDatabase = $userDatabase;
@@ -33,6 +33,8 @@ class Database {
 
         $this->connection = new mysqli($ipDatabase, $userDatabase, $passDatabase, $databaseName);
     }
+
+
 
 
     public function disconnect() {
