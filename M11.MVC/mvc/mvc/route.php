@@ -35,7 +35,7 @@ class Route {
          *
          * http://localhost/appmvc1/index.php?controller=employee&action=delete
          */
-        
+
 
         /**
          * $_REQUEST lấy tất cả các dữ liệu điều hướng
