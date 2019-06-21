@@ -13,7 +13,7 @@
         <div class="col-md-12">
             <h1>Liệt kê danh sách nhân viên</h1>
             <h1>
-                <a href="create.php" class="btn btn-success">Thêm mới nhân viên</a>
+                <a href="index.php?controller=employee&action=create" class="btn btn-success">Thêm mới nhân viên</a>
             </h1>
             <table class="table">
                 <thead>
@@ -45,8 +45,8 @@
                             <td><?php echo $row["address"] ?></td>
                             <td><?php echo $row["salary"] ?></td>
                             <td>
-                                <p><a href="edit.php?id=<?php echo $row["id"] ?>" class="btn btn-warning">Sửa nhân viên</a> </p>
-                                <p><a href="delete.php?id=<?php echo $row["id"] ?>" class="btn btn-danger">Xóa nhân viên</a> </p>
+                                <p><a href="index.php?controller=employee&action=edit&id=<?php echo $row["id"] ?>" class="btn btn-warning">Sửa nhân viên</a> </p>
+                                <p><a href="index.php?controller=employee&action=delete&id=<?php echo $row["id"] ?>" class="btn btn-danger">Xóa nhân viên</a> </p>
                             </td>
                         </tr>
                         <?php

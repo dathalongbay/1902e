@@ -16,7 +16,7 @@ class EmployeeController {
         $result = $model->getAll();
 
         // trả về view cho phần hiển thị
-        include_once "mvc/views/index.php";
+        include_once "mvc/views/employee/index.php";
     }
 
 
@@ -37,8 +37,10 @@ class EmployeeController {
 
         }
 
+
+        $name = $address = $salary = "";
         // trả về view cho phần hiển thị
-        include_once "mvc/views/create.php";
+        include_once "mvc/views/employee/create.php";
     }
 
     public function edit() {
@@ -66,7 +68,9 @@ class EmployeeController {
             $row = $model->getRow($_GET["id"]);
 
             // trả về view cho phần hiển thị
-            include_once "mvc/views/edit.php";
+            include_once "mvc/views/employee/edit.php";
+
+            return;
         }
 
         echo "URL không hợp lệ";
@@ -92,7 +96,7 @@ class EmployeeController {
         }
 
         // trả về view cho phần hiển thị
-        include_once "mvc/views/delete.php";
+        include_once "mvc/views/employee/delete.php";
     }
 
 

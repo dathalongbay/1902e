@@ -12,7 +12,7 @@
     <div class="row">
         <div class="col-md-12">
             <h1>Tạo nhân viên mới</h1>
-            <form name="create" action="" method="post">
+            <form name="create" action="index.php?controller=employee&action=create" method="post">
                 <div class="form-group">
                     <label>Tên nhân viên:</label>
                     <input type="text" name="name" class="form-control" value="<?php echo $name ?>">

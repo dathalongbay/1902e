@@ -12,7 +12,7 @@
     <div class="row">
         <div class="col-md-12">
             <h1>Sửa nhân viên</h1>
-            <form name="edit" action="" method="post">
+            <form name="edit" action="index.php?controller=employee&action=edit" method="post">
 
                 <input type="hidden" name="employee_id" value="<?php echo $row["id"] ?>">
 

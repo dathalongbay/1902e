@@ -12,9 +12,10 @@
     <div class="row">
         <div class="col-md-12">
             <h1>Xóa nhân viên</h1>
-            <form name="delete" action="" method="post">
+            <form name="delete" action="index.php?controller=employee&action=delete" method="post">
                 <div class="form-group">
-                    <label>Tên nhân viên: ABC</label>
+
+                    <input type="hidden" name="id" value="<?php echo (int) $_GET["id"]?>">
                 </div>
                 <button type="submit" class="btn btn-danger">xóa nhân viên</button>
             </form>
