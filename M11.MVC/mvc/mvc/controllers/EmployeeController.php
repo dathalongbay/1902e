@@ -1,7 +1,29 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: GiangVien T3H
- * Date: 6/21/2019
- * Time: 6:54 PM
- */
+
+
+class EmployeeController {
+
+
+    /**
+     * Dùng để điều hướng cho phần hiển thị tất cả các nhận viên
+     */
+    public function index() {
+
+    }
+
+
+    public function create() {
+
+    }
+
+    public function edit() {
+
+    }
+
+
+    public function delete() {
+
+    }
+
+
+}
