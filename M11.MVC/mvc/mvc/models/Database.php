@@ -1,5 +1,5 @@
 <?php
-
+namespace MVC\Models;
 
 class Database {
 
