@@ -43,6 +43,13 @@
     database/migrations
     sẽ thấy 1 file php có định dạng "thời_gian_tên_migration" vừa tạo
     php artisan make:migration create_category_table
+    6. sau khi migration và cấu hình đúng tên CSDL đã tồn tại trong .env
+    => tạo từ migration thành bảng CSDL thật
+    thì chạy : php artisan migrate
+    nhưng quá trình chạy lần đầu tiên sẽ gặp 1 lỗi
+    hay search google giải pháp để fix lỗi này
+    DOException::("SQLSTATE[42000]: Syntax error or access violation: 1071 Specified key was too long; max key length is 767 bytes")
+
 </pre>
 </body>
 </html>
