@@ -35,7 +35,14 @@
     - tạo 1 model nằm trong thư mục cấp 2 của Models
     php artisan make:model Models/Backend/ProductModel
     php artisan make:model Models/Frontend/ProductModel
-
+    5. tạo migration ( file dùng để tạo table trong CSDL mà không cần tương tác
+    với navicat hoặc phpmyadmin )
+    php artisan make:migration create_tên_bảng_table
+    => php artisan make:migration create_product_table
+    sau khi chạy xong câu lệnh trên thì vào folder
+    database/migrations
+    sẽ thấy 1 file php có định dạng "thời_gian_tên_migration" vừa tạo
+    php artisan make:migration create_category_table
 </pre>
 </body>
 </html>
