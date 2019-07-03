@@ -7,9 +7,9 @@
     <!-- BOOTSTRAP STYLES-->
     <link href="{{ asset("bs-simple-admin/assets/css/bootstrap.css") }}" rel="stylesheet" />
     <!-- FONTAWESOME STYLES-->
-    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <link href="{{ asset("bs-simple-admin/assets/css/font-awesome.css") }}" rel="stylesheet" />
     <!-- CUSTOM STYLES-->
-    <link href="assets/css/custom.css" rel="stylesheet" />
+    <link href="{{ asset("bs-simple-admin/assets/css/custom.css") }}" rel="stylesheet" />
     <!-- GOOGLE FONTS-->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 </head>
@@ -451,11 +451,11 @@
 <!-- /. WRAPPER  -->
 <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
 <!-- JQUERY SCRIPTS -->
-<script src="assets/js/jquery-1.10.2.js"></script>
+<script src="{{ asset("bs-simple-admin/assets/js/jquery-1.10.2.js") }}"></script>
 <!-- BOOTSTRAP SCRIPTS -->
-<script src="assets/js/bootstrap.min.js"></script>
+<script src="{{ asset("bs-simple-admin/assets/js/bootstrap.min.js") }}"></script>
 <!-- CUSTOM SCRIPTS -->
-<script src="assets/js/custom.js"></script>
+<script src="{{ asset("bs-simple-admin/assets/js/custom.js") }}"></script>
 
 
 </body>
