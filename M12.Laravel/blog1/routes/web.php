@@ -23,6 +23,26 @@ Route::get('/article', function () {
     return view('simpleadmin.article.article');
 });
 
+Route::get('/user', function () {
+    return view('simpleadmin.user.user');
+});
+
+Route::get('/banner', function () {
+    return view('simpleadmin.banner.banner');
+});
+
+Route::get('/email', function () {
+    return view('simpleadmin.email.email');
+});
+
+Route::get('/product', function () {
+    return view('simpleadmin.product.product');
+});
+
+Route::get('/permission', function () {
+    return view('simpleadmin.permission.permission');
+});
+
 
 
 Route::get('/abc', function (){

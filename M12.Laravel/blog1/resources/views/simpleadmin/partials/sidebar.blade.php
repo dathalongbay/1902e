@@ -18,20 +18,20 @@
 
 
             <li>
-                <a href="#"><i class="fa fa-qrcode "></i>Quản trị người dùng</a>
+                <a href="{{ url("/user") }}"><i class="fa fa-qrcode "></i>Quản trị người dùng</a>
             </li>
             <li>
-                <a href="#"><i class="fa fa-bar-chart-o"></i>Quản trị banner</a>
+                <a href="{{ url("/banner") }}"><i class="fa fa-bar-chart-o"></i>Quản trị banner</a>
             </li>
 
             <li>
-                <a href="#"><i class="fa fa-edit "></i>Quản trị sản phẩm </a>
+                <a href="{{ url("/product") }}"><i class="fa fa-edit "></i>Quản trị sản phẩm </a>
             </li>
             <li>
-                <a href="#"><i class="fa fa-table "></i>Quản trị email</a>
+                <a href="{{ url("/email") }}"><i class="fa fa-table "></i>Quản trị email</a>
             </li>
             <li>
-                <a href="#"><i class="fa fa-edit "></i>Phân quyền </a>
+                <a href="{{ url("/permission") }}"><i class="fa fa-edit "></i>Phân quyền </a>
             </li>
 
         </ul>

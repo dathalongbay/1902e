@@ -1,7 +1,13 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Giang Vien T3H
- * Date: 7/7/2019
- * Time: 7:39 PM
- */
+@extends("simpleadmin.layouts.simpleadmin")
+
+@section("title")
+    Quản trị banner
+@endsection
+
+@section("content")
+    <div id="page-wrapper" >
+        <div id="page-inner">
+            Nội dung phần quản trị banner
+        </div>
+    </div>
+@endsection
