@@ -13,7 +13,7 @@
                 <a href="{{ url("/category") }}"><i class="fa fa-table "></i>Quản trị danh mục  </a>
             </li>
             <li>
-                <a href="blank.html"><i class="fa fa-edit "></i>Quản trị bài viết  </a>
+                <a href="{{ url("/article") }}"><i class="fa fa-edit "></i>Quản trị bài viết</a>
             </li>
 
 

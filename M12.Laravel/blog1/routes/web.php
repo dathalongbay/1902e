@@ -19,6 +19,10 @@ Route::get('/category', function () {
     return view('simpleadmin.category.category');
 });
 
+Route::get('/article', function () {
+    return view('simpleadmin.article.article');
+});
+
 
 
 Route::get('/abc', function (){
