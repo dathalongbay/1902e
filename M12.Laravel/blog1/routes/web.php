@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('simpleadmin');
+    return view('simpleadmin.homepage.homepage1');
 });
 
 Route::get('/abc', function (){
