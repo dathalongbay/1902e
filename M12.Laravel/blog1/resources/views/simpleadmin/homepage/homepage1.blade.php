@@ -1,3 +1,5 @@
+@extends("simpleadmin.layouts.simpleadmin")
+
 @section("title")
 Simple Responsive Admin
 @endsection
