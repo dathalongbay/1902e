@@ -5,33 +5,33 @@
 
 
             <li class="active-link">
-                <a href="index.html" ><i class="fa fa-desktop "></i>Dashboard <span class="badge">Included</span></a>
+                <a href="{{ url("/") }}" ><i class="fa fa-desktop "></i>Bảng điều khiển </a>
             </li>
 
 
             <li>
-                <a href="ui.html"><i class="fa fa-table "></i>UI Elements  <span class="badge">Included</span></a>
+                <a href="{{ url("/category") }}"><i class="fa fa-table "></i>Quản trị danh mục  </a>
             </li>
             <li>
-                <a href="blank.html"><i class="fa fa-edit "></i>Blank Page  <span class="badge">Included</span></a>
-            </li>
-
-
-            <li>
-                <a href="#"><i class="fa fa-qrcode "></i>My Link One</a>
-            </li>
-            <li>
-                <a href="#"><i class="fa fa-bar-chart-o"></i>My Link Two</a>
+                <a href="blank.html"><i class="fa fa-edit "></i>Quản trị bài viết  </a>
             </li>
 
+
             <li>
-                <a href="#"><i class="fa fa-edit "></i>My Link Three </a>
+                <a href="#"><i class="fa fa-qrcode "></i>Quản trị người dùng</a>
             </li>
             <li>
-                <a href="#"><i class="fa fa-table "></i>My Link Four</a>
+                <a href="#"><i class="fa fa-bar-chart-o"></i>Quản trị banner</a>
+            </li>
+
+            <li>
+                <a href="#"><i class="fa fa-edit "></i>Quản trị sản phẩm </a>
             </li>
             <li>
-                <a href="#"><i class="fa fa-edit "></i>My Link Five </a>
+                <a href="#"><i class="fa fa-table "></i>Quản trị email</a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-edit "></i>Phân quyền </a>
             </li>
 
         </ul>

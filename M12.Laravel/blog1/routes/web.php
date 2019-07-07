@@ -15,6 +15,12 @@ Route::get('/', function () {
     return view('simpleadmin.homepage.homepage1');
 });
 
+Route::get('/category', function () {
+    return view('simpleadmin.category.category');
+});
+
+
+
 Route::get('/abc', function (){
     echo "ABC";
 });
