@@ -5,3 +5,5 @@
 # https://learnstockio.herokuapp.com/mysql2.html
 # https://learnstockio.herokuapp.com/mysql3.html
 # https://toidicode.com/php-huong-doi-tuong
+
+# https://w3layouts.com/shoppy-e-commerce-admin-panel-responsive-web-template/
