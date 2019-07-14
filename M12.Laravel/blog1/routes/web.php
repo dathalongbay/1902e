@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('simpleadmin.homepage.homepage1');
-});
+Route::get('/', "Backend\HomepageController@index");
 
 Route::get('/category', function () {
     return view('simpleadmin.category.category');
