@@ -76,7 +76,7 @@ class Student {
          * is_array() kiểm tra biến có phải 1 mảng hay không
          * !empty() check không rỗng
          * empty() check rỗng
-         * ! toán tử ! phủ định người lại
+         * ! toán tử ! phủ định ngược lại
          */
         if (is_array($point_arr_param) && !empty($point_arr_param)) {
             $count = 0;
